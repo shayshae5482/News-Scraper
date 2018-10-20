@@ -31,7 +31,7 @@ app.use(express.static("public"));
 
 // Connect Mongo DB
 
-var PORT = process.env.PORT || 3000;
+//var PORT = process.env.PORT || 3000;
 //mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
 
 
