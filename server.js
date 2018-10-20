@@ -10,6 +10,7 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
+var PORT = process.env.PORT || 3000;
 var PORT = 3000;
 
 // Express
@@ -25,10 +26,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect Mongo DB
-mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
+
+var PORT = process.env.PORT || 3000;
+//mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
 
 //MONGO for HEROKU
-var MONGODB_URI = process.env.MONGODB_URI
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines"
 
 mongoose.connect(MONGODB_URI);
 
