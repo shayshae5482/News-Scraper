@@ -30,6 +30,9 @@ mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true }
 //MONGO for HEROKU
 var MONGODB_URI = process.env.MONGODB_URI
 
+mongoose.connect(MONGODB_URI);
+
+
 // Routes
 
 app.get("/scrape", function(req, res) {
